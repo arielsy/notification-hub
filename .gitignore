@@ -419,3 +419,6 @@ FodyWeavers.xsd
 
 # Claude Code local files
 .claude/
+
+# macOS
+.DS_Store
