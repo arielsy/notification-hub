@@ -8,7 +8,7 @@ Notification Hub é um sistema centralizado de notificações inspirado em plata
 | Fase | Descrição                                         | Status         |
 |------|---------------------------------------------------|----------------|
 | A0   | Console App + Models + Git (Conventional Commits) | ✅ Concluída    |
-| A1   | Docker + SQL Server                               | ⬜              |
+| A1   | Docker + SQL Server                               | 🔄 Em Andamento |
 | A2   | Clean Architecture + API REST                     | ⬜              |
 | A3   | Redis (cache, rate limiting)                      | ⬜              |
 | A4   | RabbitMQ (filas por canal)                        | ⬜              |
