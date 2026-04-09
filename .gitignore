@@ -9,7 +9,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-*.env
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -423,3 +422,8 @@ FodyWeavers.xsd
 # macOS
 .DS_Store
 **/DS_Store
+
+# Docker
+docker-compose.override.yaml
+.env
+.env.*
