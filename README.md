@@ -32,7 +32,7 @@ Conexão direta ao banco (Azure Data Studio / SSMS): `localhost:1433`, usuário 
 | Fase | Descrição                                         | Status         |
 |------|---------------------------------------------------|----------------|
 | A0   | Console App + Models + Git (Conventional Commits) | ✅ Concluída    |
-| A1   | Docker + SQL Server                               | 🔄 Em Andamento |
+| A1   | Docker + SQL Server                               | ✅ Concluída    |
 | A2   | Clean Architecture + API REST                     | ⬜              |
 | A3   | Redis (cache, rate limiting)                      | ⬜              |
 | A4   | RabbitMQ (filas por canal)                        | ⬜              |
