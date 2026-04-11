@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 namespace NotificationHub.Data;
 
 public class NotificationEntity 

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using NotificationHub.Data;
 
+namespace NotificationHub.Data;
 public class AppDbContext : DbContext
 {
     public DbSet<NotificationEntity> Notifications => Set<NotificationEntity>();
