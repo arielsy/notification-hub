@@ -1,0 +1,27 @@
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Hub@Sql2026!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P 'Hub@Sql2026!' -Q 'SELECT 1' -C"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  app:
+    build: .
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=db,1433;Database=NotificationHub;User Id=sa;Password=Hub@Sql2026!;TrustServerCertificate=True;"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  sqldata:
