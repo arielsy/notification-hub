@@ -14,3 +14,27 @@ Notification Hub é um sistema centralizado de notificações inspirado em plata
 | A4   | RabbitMQ (filas por canal)                        | ⬜              |
 | A5   | Testes (unit, integração, carga)                  | ⬜              |
 | A6   | CI/CD + Observabilidade                           | ⬜              |
+
+## Como Rodar
+
+**Pré-requisito:** Docker Desktop instalado e em execução.
+
+```bash
+docker-compose up --build
+```
+
+Isso vai:
+1. Subir SQL Server 2022 em container com volume persistente
+2. Aguardar o banco estar pronto (healthcheck automático)
+3. Compilar e executar a aplicação .NET
+4. Salvar uma notificação no banco e imprimir o resultado
+
+```bash
+# Para os containers preservando os dados
+docker-compose down
+
+# Para os containers e apaga os dados
+docker-compose down -v
+```
+
+Conexão direta ao banco (Azure Data Studio / SSMS): `localhost:1433`, usuário `sa`, senha `Hub@Sql2026!`.
